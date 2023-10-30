@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AplicaçãoFUCAPI09.11</string>
+
+    <string name="cadastreseAqui"><u>Cadastre-se AQUI</u></string>
 </resources>
