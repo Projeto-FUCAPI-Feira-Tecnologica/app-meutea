@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".MainActivity">
+    tools:context=".activity_cadastrar">
 
     <ImageButton
-        android:id="@+id/btnVoltar"
+        android:id="@+id/imgBtnCad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -45,21 +45,22 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewCad"
         android:layout_width="195dp"
         android:layout_height="0dp"
         android:fontFamily="@font/inter"
-        android:text="Faça o seu login com o email cadastrado para acessar o aplicativo"
+        android:text="Faça o seu cadastro para acessar o aplicativo"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutCad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="230dp"
         android:orientation="vertical"
@@ -67,21 +68,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/textViewCad">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/outline_person_24"
+                android:ellipsize="none
+"
+                android:gravity="center"
+                android:hint="Nome" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/email_24"
                 android:gravity="center"
-
-
                 android:hint="Email"
+
+
                 android:inputType="text|textEmailAddress"
                 android:textColor="#000000" />
 
@@ -90,14 +104,12 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editSenha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/lock_24"
                     android:ellipsize="none"
                     android:gravity="center"
-                    android:hint="Senha"
-                    android:inputType="text|textPassword" />
+                    android:hint="Senha" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -110,30 +122,13 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#42B4E9"
         android:elevation="5dp"
-        android:onClick="enviar"
         android:stateListAnimator="@null"
-        android:text="CONTINUAR"
-
+        android:text="CADASTRAR"
         android:textSize="20sp"
+
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/txtVCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/inter_semibold"
-        android:onClick="cadastrar"
-        android:text="@string/cadastreseAqui"
-        android:textColor="#16593C"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnContinuar" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
