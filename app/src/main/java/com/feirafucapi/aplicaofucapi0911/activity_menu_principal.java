@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 public class activity_menu_principal extends AppCompatActivity {
 
-    private TextView textNome;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
