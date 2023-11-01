@@ -18,7 +18,7 @@ public class activity_cadastrar extends AppCompatActivity {
 
         btnCadastrar = findViewById(R.id.btnContinuar);
 
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+        btnCadastrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
