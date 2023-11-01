@@ -30,11 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_menu_principal.class);
-                /*String email = campoemail.toString();
-                String senha = camposenha.toString();
 
-                intent.putExtra("email", "Luiz");
-                intent.putExtra("senha", "123");*/
                 startActivity(intent);
             }
         });
