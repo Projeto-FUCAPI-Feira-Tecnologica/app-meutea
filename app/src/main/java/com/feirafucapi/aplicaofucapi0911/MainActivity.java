@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText campoemail;
     private EditText camposenha;
     private Button buttonContinuar;
-
+    private ImageButton buttonVoltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         camposenha = findViewById(R.id.editSenha);
         textCadastre = findViewById(R.id.txtVCadastrar);
         buttonContinuar = findViewById(R.id.btnContinuar);
+        buttonVoltar = findViewById(R.id.btnVoltar);
 
         buttonContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     public void cadastrar(View view){

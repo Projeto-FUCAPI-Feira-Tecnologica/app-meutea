@@ -19,7 +19,7 @@
         app:srcCompat="@mipmap/ic_meutea" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imgbVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
