@@ -12,27 +12,18 @@ import android.widget.TextView;
 public class activity_menu_principal extends AppCompatActivity {
 
     private Button botaoRotina;
-    private ImageButton ibVoltar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
         botaoRotina = findViewById(R.id.btnRotina);
-        ibVoltar = findViewById(R.id.imgbVoltar);
 
         botaoRotina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
-                startActivity(intent);
-            }
-        });
-
-        ibVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_menu_principal.class);
                 startActivity(intent);
             }
         });
