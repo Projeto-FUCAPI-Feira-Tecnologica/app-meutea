@@ -105,7 +105,7 @@
             app:cornerRadius="35dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnCarteirinha"
             android:layout_gravity="center_horizontal"
             android:layout_width="305dp"
             android:layout_height="wrap_content"

@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class activity_menu_principal extends AppCompatActivity {
 
     private Button botaoRotina;
+    private Button botaoCarteirinha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +20,20 @@ public class activity_menu_principal extends AppCompatActivity {
         setContentView(R.layout.activity_menu_principal);
 
         botaoRotina = findViewById(R.id.btnRotina);
+        botaoCarteirinha = findViewById(R.id.btnCarteirinha);
 
         botaoRotina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
+                startActivity(intent);
+            }
+        });
+
+        botaoCarteirinha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_carteirinha_digital.class);
                 startActivity(intent);
             }
         });
