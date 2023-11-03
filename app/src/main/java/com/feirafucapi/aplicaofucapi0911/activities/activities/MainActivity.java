@@ -1,4 +1,4 @@
-package com.feirafucapi.aplicaofucapi0911;
+package com.feirafucapi.aplicaofucapi0911.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.feirafucapi.aplicaofucapi0911.R;
 
 public class MainActivity extends AppCompatActivity {
 

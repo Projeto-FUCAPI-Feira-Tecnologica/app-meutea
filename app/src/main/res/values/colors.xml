@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="rotina_vermelho">#FF0000</color>
+    <color name="background_quadrado_rotina">#00000000</color>
+    <color name="stroke_quadrado_rotina">#33FFFFFF</color>
 </resources>

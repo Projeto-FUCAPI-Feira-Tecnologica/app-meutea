@@ -1,4 +1,4 @@
-package com.feirafucapi.aplicaofucapi0911;
+package com.feirafucapi.aplicaofucapi0911.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.feirafucapi.aplicaofucapi0911.R;
 
 public class activity_carteirinha_digital extends AppCompatActivity {
 

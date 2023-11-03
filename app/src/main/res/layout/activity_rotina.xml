@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_orange_background"
-    tools:context=".activity_rotina">
+    tools:context=".activities.activities.activity_rotina">
 
 
     <ImageView
@@ -53,7 +53,7 @@
             app:cornerRadius="35dp" />
 
         <Button
-            android:id="@+id/button33"
+            android:id="@+id/btnTercaFeira"
             android:layout_gravity="center_horizontal"
             android:layout_width="305dp"
             android:layout_height="wrap_content"
