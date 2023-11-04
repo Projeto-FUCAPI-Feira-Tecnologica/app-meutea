@@ -20,7 +20,7 @@ public class activity_cadastrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
 
-        btnCadastrar = findViewById(R.id.btnContinuar);
+        btnCadastrar = findViewById(R.id.btnCadastrar);
         ibCad = findViewById(R.id.imgBtnCad);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener(){

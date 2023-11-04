@@ -24,25 +24,28 @@
 
         <ImageView
             android:id="@+id/ivRotina1"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_model_recyclerview_rotina" />
 
         <ImageView
             android:id="@+id/ivRotina2"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
             android:src="@drawable/ic_model_recyclerview_rotina" />
 
         <ImageView
             android:id="@+id/ivRotina3"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
             android:src="@drawable/ic_model_recyclerview_rotina" />
 

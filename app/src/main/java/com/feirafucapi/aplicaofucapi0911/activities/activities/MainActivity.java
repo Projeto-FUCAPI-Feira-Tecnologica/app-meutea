@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         campoemail = findViewById(R.id.editEmail);
         camposenha = findViewById(R.id.editSenha);
         textCadastre = findViewById(R.id.txtVCadastrar);
-        buttonContinuar = findViewById(R.id.btnContinuar);
+        buttonContinuar = findViewById(R.id.btnCadastrar);
         buttonVoltar = findViewById(R.id.btnVoltar);
 
         buttonContinuar.setOnClickListener(new View.OnClickListener() {

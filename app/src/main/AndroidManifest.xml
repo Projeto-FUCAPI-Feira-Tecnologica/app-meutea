@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AplicaçãoFUCAPI0911"
         tools:targetApi="31">
         <activity
+            android:name=".activities.activities.addrotina"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.tercafeira_rotina"
             android:exported="false" />
         <activity

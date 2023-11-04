@@ -19,6 +19,7 @@ public class AdaptadorRotina extends RecyclerView.Adapter<AdaptadorRotina.MyView
     private final List<Rotina> listaRotinass;
 
     public AdaptadorRotina(List<Rotina> lista) {
+
         this.listaRotinass = lista;
     }
 
@@ -37,8 +38,9 @@ public class AdaptadorRotina extends RecyclerView.Adapter<AdaptadorRotina.MyView
         Rotina rotina = listaRotinass.get(position);
 
         holder.horario.setText(rotina.getHorarioRotina());
-        holder.rotina1.setImageResource(R.drawable.ic_model_recyclerview_rotina);
-        holder.rotina2.setImageResource(R.drawable.ic_model_recyclerview_rotina);
+        holder.rotina1.setImageResource(rotina.getRotina1());
+        holder.rotina2.setImageResource(rotina.getRotina2());
+        holder.rotina3.setImageResource(rotina.getRotina3());
     }
 
     @Override

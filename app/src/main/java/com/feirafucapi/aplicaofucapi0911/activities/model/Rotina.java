@@ -2,13 +2,15 @@ package com.feirafucapi.aplicaofucapi0911.activities.model;
 
 import android.widget.ImageView;
 
-public class Rotina {
+import java.io.Serializable;
 
+public class Rotina implements Serializable {
+
+    private Long id;
     private String horarioRotina;
     private int rotina1, rotina2, rotina3;
 
-    public Rotina(){
-
+    public Rotina() {
     }
 
     public Rotina(String horarioRotina, int rotina1, int rotina2, int rotina3) {
@@ -16,6 +18,14 @@ public class Rotina {
         this.rotina1 = rotina1;
         this.rotina2 = rotina2;
         this.rotina3 = rotina3;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getHorarioRotina() {
@@ -50,3 +60,4 @@ public class Rotina {
         this.rotina3 = rotina3;
     }
 }
+

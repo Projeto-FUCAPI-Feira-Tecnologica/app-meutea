@@ -6,18 +6,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
 
-    <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="340dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/carteirinha_background"
+    <TextView
+        android:id="@+id/textViewVerso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter"
+        android:text="Verso"
+        android:textColor="#191818"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <ImageButton
         android:id="@+id/imgBtnCarteirinha"
@@ -36,7 +38,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/inter"
         android:text="Frente"
         android:textColor="#191818"
@@ -48,48 +50,51 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="240dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/carteirinha_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ImageView
+            android:id="@+id/ivFotoCarteirinha"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="start|center_horizontal"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="1.5dp"
+            android:scaleType="fitStart"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/textViewNomeCarteirinha"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_gravity="end|center_horizontal"
-            android:layout_marginLeft="70dp"
-            android:text="Miguel Falabella Silva Souza"
+            android:layout_marginLeft="75dp"
+            android:gravity="center_vertical"
+            android:text="Seu nome"
             android:textSize="25sp" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="1.5dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="270dp"
-            android:layout_gravity="start|center_horizontal"
-            tools:srcCompat="@tools:sample/avatars" />
+
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/textViewVerso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/inter"
-        android:text="Verso"
-        android:textColor="#191818"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/carteirinha_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewVerso">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
