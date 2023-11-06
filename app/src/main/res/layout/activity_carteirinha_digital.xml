@@ -87,8 +87,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@id/ivFotoCarteirinha"
+                android:id="@+id/tvNome"
                 android:gravity="start"
-                android:text="Luiz Henrique Cunha do Nascimento"
+                android:text="Seu Nome"
                 android:textSize="22sp"/>
 
         </LinearLayout>
@@ -114,6 +115,7 @@
                 android:layout_height="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="30dp"
+                android:id="@+id/tvCID"
                 android:gravity="center"
                 android:background="@drawable/corner_carteirinha_label"
                 />
@@ -143,6 +145,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
+                android:id="@+id/tvRG"
                 android:background="@drawable/corner_carteirinha_label"
                 />
 
@@ -171,6 +174,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
+                android:id="@+id/tvTipo"
                 android:background="@drawable/corner_carteirinha_label"
                 />
 
@@ -198,6 +202,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
+                android:id="@+id/tvCPF"
                 android:background="@drawable/corner_carteirinha_label"
                 />
 
@@ -225,6 +230,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
                 android:gravity="center"
+                android:id="@+id/tvContato"
                 android:background="@drawable/corner_carteirinha_label"
                 />
 
@@ -250,6 +256,7 @@
                 android:layout_height="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="30dp"
+                android:id="@+id/tvNacionalidade"
                 android:background="@drawable/corner_carteirinha_label"
                 android:gravity="center"/>
 
@@ -284,7 +291,7 @@
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabAddCarteirinha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"

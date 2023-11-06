@@ -110,10 +110,8 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#42B4E9"
         android:elevation="5dp"
-        android:onClick="enviar"
         android:stateListAnimator="@null"
         android:text="CONTINUAR"
-
         android:textSize="20sp"
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"

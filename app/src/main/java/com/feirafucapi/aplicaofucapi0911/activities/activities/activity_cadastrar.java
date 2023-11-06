@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.feirafucapi.aplicaofucapi0911.R;
-import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelper;
+import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelperUserCadastro;
 
 public class activity_cadastrar extends AppCompatActivity {
 
@@ -22,9 +22,9 @@ public class activity_cadastrar extends AppCompatActivity {
     private SQLiteDatabase bancoDadosUser;
     private EditText campoNome, campoEmail, campoSenha;
     private ImageButton ibCad;
-    private DBHelper dbHelper;
+    private DBHelperUserCadastro dbHelperUserCadastro;
 
-    DBHelper dbTea = new DBHelper(this); // Criação do objeto referente ao banco de dados
+    DBHelperUserCadastro dbTea = new DBHelperUserCadastro(this); // Criação do objeto referente ao banco de dados
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +33,7 @@ public class activity_cadastrar extends AppCompatActivity {
         campoNome = findViewById(R.id.campoNome);
         campoEmail = findViewById(R.id.campoEmail);
         campoSenha = findViewById(R.id.campoSenha);
-        dbHelper = new DBHelper(this);
+        dbHelperUserCadastro = new DBHelperUserCadastro(this);
 
         btnCadastrar = findViewById(R.id.btnCadastrar);
         ibCad = findViewById(R.id.imgBtnCad);
@@ -49,12 +49,12 @@ public class activity_cadastrar extends AppCompatActivity {
                 if(nome.equals("") || email.equals("") || senha.equals("")){
                     Toast.makeText(activity_cadastrar.this, "Preencha todos os campos corretamente.", Toast.LENGTH_LONG).show();
                 }else{
-                    if(dbHelper.checarNome(nome)){
+                    if(dbHelperUserCadastro.checarNome(nome)){
                         Toast.makeText(activity_cadastrar.this, "Usuário já existe!", Toast.LENGTH_LONG).show();
                         return;
                     }
 
-                    boolean registradoSucesso = dbHelper.inserirDados(nome, email, senha);
+                    boolean registradoSucesso = dbHelperUserCadastro.inserirDados(nome, email, senha);
 
                     if(registradoSucesso){
                         Toast.makeText(activity_cadastrar.this, "Usuário Registrado COM SUCESSO!", Toast.LENGTH_LONG).show();

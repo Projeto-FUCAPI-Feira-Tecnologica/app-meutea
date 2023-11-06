@@ -6,13 +6,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
-public class DBHelper extends SQLiteOpenHelper {
+public class DBHelperUserCadastro extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "MeuTea.db";
     private static final int DATABASE_VERSION = 1;
 
-    public DBHelper(Context context) {
+    public DBHelperUserCadastro(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -60,9 +58,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor pegarNome(){
+    public Cursor pegarNome(String useremail, String usersenha){
         SQLiteDatabase meuDB = this.getWritableDatabase();
-        Cursor cursor = meuDB.rawQuery("SELECT nome FROM Usuario", null);
+        Cursor cursor = meuDB.rawQuery("SELECT nome FROM Usuario WHERE email = ? and senha = ?", new String[]{useremail, usersenha});
         return cursor;
     }
+
+
 }

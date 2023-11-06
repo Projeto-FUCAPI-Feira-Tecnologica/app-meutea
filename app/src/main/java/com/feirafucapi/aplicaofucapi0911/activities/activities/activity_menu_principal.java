@@ -3,19 +3,23 @@ package com.feirafucapi.aplicaofucapi0911.activities.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
-import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelper;
+import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelperUserCadastro;
 
 public class activity_menu_principal extends AppCompatActivity {
 
     private Button botaoRotina;
     private Button botaoCarteirinha;
-    private DBHelper dbHelper;
+    private DBHelperUserCadastro dbHelperUserCadastro;
+    private Cursor nome;
+    private TextView bemvindo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,14 @@ public class activity_menu_principal extends AppCompatActivity {
 
         botaoRotina = findViewById(R.id.btnRotina);
         botaoCarteirinha = findViewById(R.id.btnCarteirinha);
-        dbHelper = new DBHelper(this);
+        bemvindo = findViewById(R.id.textViewBemVindo);
 
+        dbHelperUserCadastro = new DBHelperUserCadastro(this);
 
+        /*Intent intent = getIntent();
+        String nome = intent.getStringExtra("NAME");
+
+        bemvindo.setText("Bem-vindo, "+nome.toString());*/
 
         botaoRotina.setOnClickListener(new View.OnClickListener() {
             @Override
