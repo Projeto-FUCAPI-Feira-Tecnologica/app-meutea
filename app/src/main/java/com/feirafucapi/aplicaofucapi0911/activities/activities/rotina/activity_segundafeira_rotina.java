@@ -1,4 +1,4 @@
-package com.feirafucapi.aplicaofucapi0911.activities.activities;
+package com.feirafucapi.aplicaofucapi0911.activities.activities.rotina;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,24 +9,22 @@ import android.widget.ImageButton;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 
-public class activity_carteirinha_digital extends AppCompatActivity {
+public class activity_segundafeira_rotina extends AppCompatActivity {
 
     private ImageButton btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carteirinha_digital);
+        setContentView(R.layout.activity_segundafeira_rotina);
 
-        btnVoltar = findViewById(R.id.btnVoltarCarteirinha);
-
+        btnVoltar = findViewById(R.id.ibVoltarSR);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_menu_principal.class);
+                Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
                 startActivity(intent);
             }
         });
-
     }
 }

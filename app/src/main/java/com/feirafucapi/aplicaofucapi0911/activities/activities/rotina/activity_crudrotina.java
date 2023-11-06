@@ -1,4 +1,4 @@
-package com.feirafucapi.aplicaofucapi0911.activities.activities;
+package com.feirafucapi.aplicaofucapi0911.activities.activities.rotina;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 
-public class addrotina extends AppCompatActivity {
+public class activity_crudrotina extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addrotina);
+        setContentView(R.layout.activity_crudrotina);
     }
 }

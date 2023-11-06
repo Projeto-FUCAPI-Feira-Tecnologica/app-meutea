@@ -13,13 +13,19 @@
         android:theme="@style/Theme.AplicaçãoFUCAPI0911"
         tools:targetApi="31">
         <activity
-            android:name=".activities.activities.addrotina"
+            android:name=".activities.activities.rotina.activity_segundafeira_rotina"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.tercafeira_rotina"
+            android:name=".activities.activities.rotina.activity_crudrotina"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_rotina"
+            android:name=".activities.activities.rotina.addrotina"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.activity_tercafeira_rotina"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.activity_rotina"
             android:exported="false" />
         <activity
             android:name=".activities.activities.activity_carteirinha_digital"
@@ -31,7 +37,7 @@
             android:name=".activities.activities.activity_cadastrar"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.MainActivity"
+            android:name=".activities.activities.activity_login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

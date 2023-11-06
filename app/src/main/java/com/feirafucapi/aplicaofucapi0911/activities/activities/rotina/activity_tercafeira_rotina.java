@@ -1,4 +1,4 @@
-package com.feirafucapi.aplicaofucapi0911.activities.activities;
+package com.feirafucapi.aplicaofucapi0911.activities.activities.rotina;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -15,16 +15,17 @@ import android.widget.LinearLayout;
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.adapter.AdaptadorRotina;
 import com.feirafucapi.aplicaofucapi0911.activities.model.Rotina;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class tercafeira_rotina extends AppCompatActivity {
+public class activity_tercafeira_rotina extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private List<Rotina> listaRotinas = new ArrayList<>();
-    private ImageView rotina1, rotina2, rotina3;
     private ImageButton btnVoltar;
+    private FloatingActionButton fabEditarAdicionar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class tercafeira_rotina extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerViewRotina);
         btnVoltar = findViewById(R.id.ibVoltarTR);
+        fabEditarAdicionar = findViewById(R.id.floatingActionButtonAdd);
+
 
         AdaptadorRotina adaptador = new AdaptadorRotina(listaRotinas);
 
@@ -47,6 +50,17 @@ public class tercafeira_rotina extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
+                startActivity(intent);
+            }
+        });
+
+        fabEditarAdicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Implemente a lógica para edição/adicionar aqui
+                // Você pode abrir uma nova atividade de edição ou um diálogo para isso
+                // Por exemplo, para adicionar um novo item:
+                Intent intent = new Intent(getApplicationContext(), activity_crudrotina.class);
                 startActivity(intent);
             }
         });

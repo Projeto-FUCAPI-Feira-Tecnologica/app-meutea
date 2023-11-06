@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_orange_background"
-    tools:context=".activities.activities.activity_rotina">
+    tools:context=".activities.activities.rotina.activity_rotina">
 
 
     <ImageView
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnSegundaFeira"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

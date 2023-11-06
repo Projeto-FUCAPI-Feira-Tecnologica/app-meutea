@@ -8,11 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.feirafucapi.aplicaofucapi0911.R;
+import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
+import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelper;
 
 public class activity_menu_principal extends AppCompatActivity {
 
     private Button botaoRotina;
     private Button botaoCarteirinha;
+    private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,9 @@ public class activity_menu_principal extends AppCompatActivity {
 
         botaoRotina = findViewById(R.id.btnRotina);
         botaoCarteirinha = findViewById(R.id.btnCarteirinha);
+        dbHelper = new DBHelper(this);
+
+
 
         botaoRotina.setOnClickListener(new View.OnClickListener() {
             @Override
