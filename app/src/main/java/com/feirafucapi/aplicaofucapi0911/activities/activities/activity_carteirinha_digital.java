@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelperCarteirinhaDigital;
+import com.feirafucapi.aplicaofucapi0911.activities.helper.DBManagerCarteirinha;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class activity_carteirinha_digital extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class activity_carteirinha_digital extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carteirinha_digital);
 
-       btnVoltar = findViewById(R.id.btnVoltarCarteirinha);
+        btnVoltar = findViewById(R.id.btnVoltarCarteirinha);
         fabAdd = findViewById(R.id.fabAddCarteirinha);
         txtNome = findViewById(R.id.tvNome);
         txtCID = findViewById(R.id.tvCID);
@@ -35,30 +36,26 @@ public class activity_carteirinha_digital extends AppCompatActivity {
         txtCPF = findViewById(R.id.tvCPF);
         txtContato = findViewById(R.id.tvContato);
         txtNacionalidade = findViewById(R.id.tvNacionalidade);
-        DB = new DBHelperCarteirinhaDigital(this);
 
-        Cursor cursor = DB.pegarTextos();
+        Intent intent = getIntent();
 
-        // Verifique se o cursor não é nulo
-        if (cursor != null && cursor.moveToFirst()) {
-            // Obtenha os valores das colunas do cursor
-            String nome = cursor.getString(cursor.getColumnIndex("nome"));
-            String cid = cursor.getString(cursor.getColumnIndex("cid"));
-            String rg = cursor.getString(cursor.getColumnIndex("rg"));
-            String tipo = cursor.getString(cursor.getColumnIndex("tipo"));
-            String cpf = cursor.getString(cursor.getColumnIndex("cpf"));
-            String contato = cursor.getString(cursor.getColumnIndex("contato"));
-            String nacionalidade = cursor.getString(cursor.getColumnIndex("nacionalidade"));
+        String strnome = intent.getStringExtra("nome");
+        String strcid = intent.getStringExtra("cid");
+        String strrg = intent.getStringExtra("rg");
+        String strtipo = intent.getStringExtra("tipo");
+        String strcpf = intent.getStringExtra("cpf");
+        String strcontato = intent.getStringExtra("contato");
+        String strnacionalidade = intent.getStringExtra("nacionalidade");
 
-            // Defina os valores nas TextViews correspondentes
-            txtNome.setText(nome);
-            txtCID.setText(cid);
-            txtRG.setText(rg);
-            txtTipo.setText(tipo);
-            txtCPF.setText(cpf);
-            txtContato.setText(contato);
-            txtNacionalidade.setText(nacionalidade);
-        }
+        txtNome.setText(strnome);
+        txtCID.setText(strcid);
+        txtRG.setText(strrg);
+        txtTipo.setText(strtipo);
+        txtCPF.setText(strcpf);
+        txtContato.setText(strcontato);
+        txtNacionalidade.setText(strnacionalidade);
+
+
 
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override

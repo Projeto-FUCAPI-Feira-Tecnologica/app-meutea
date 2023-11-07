@@ -10,6 +10,15 @@ public class DBHelperCarteirinhaDigital extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "MeuteaCarteirinha.db";
     private static final int DATABASE_VERSION = 1;
+    public static final String NOME = "nome";
+    public static final String CID = "cid";
+    public static final String RG = "rg";
+    public static final String TIPO = "tipo";
+    public static final String CPF = "cpf";
+    public static final String CONTATO = "contato";
+    public static final String NACIONALIDADE = "nacionalidade";
+    public static final String TABELA_NOME = "Carteira";
+
 
     public DBHelperCarteirinhaDigital(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -38,25 +47,4 @@ public class DBHelperCarteirinhaDigital extends SQLiteOpenHelper {
 
     }
 
-    public boolean inserirDadosCarteirinha(String nome,String cid, String rg, String tipo, String cpf, String contato, String nacionalidade) {
-        SQLiteDatabase meuDB = this.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put("nome", nome);
-        cv.put("cid", cid);
-        cv.put("rg", rg);
-        cv.put("tipo", tipo);
-        cv.put("cpf", cpf);
-        cv.put("contato", contato);
-        cv.put("nacionalidade", nacionalidade);
-
-        long result = meuDB.insert("Carteira", null, cv);
-        if(result==-1) return false;
-        else return true;
-    }
-
-    public Cursor pegarTextos(){
-        SQLiteDatabase DB = this.getReadableDatabase();
-        Cursor cursor = DB.rawQuery("SELECT * FROM Carteira", null);
-        return cursor;
-    }
 }

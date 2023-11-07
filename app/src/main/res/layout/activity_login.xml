@@ -79,8 +79,6 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/email_24"
                 android:gravity="center"
-
-
                 android:hint="Email"
                 android:inputType="text|textEmailAddress"
                 android:textColor="#000000" />
