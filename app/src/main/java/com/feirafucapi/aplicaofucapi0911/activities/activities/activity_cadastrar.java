@@ -57,7 +57,10 @@ public class activity_cadastrar extends AppCompatActivity {
                     boolean registradoSucesso = dbHelperUserCadastro.inserirDados(nome, email, senha);
 
                     if(registradoSucesso){
-                        Toast.makeText(activity_cadastrar.this, "Usuário Registrado COM SUCESSO!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(activity_cadastrar.this, "Usuário Registrado COM SUCESSO!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), activity_login.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                     }else{
                         Toast.makeText(activity_cadastrar.this, "Falha ao registrar o usuário.", Toast.LENGTH_LONG).show();
                     }

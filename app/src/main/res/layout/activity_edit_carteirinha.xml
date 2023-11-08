@@ -7,11 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activities.activities.activity_crud_carteirinha">
+    tools:context=".activities.activities.activity_edit_carteirinha">
 
 
     <TextView
-        android:id="@+id/titulinho"
+        android:id="@+id/titulinhoedit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -19,29 +19,26 @@
         android:layout_marginEnd="60dp"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="center"
-        android:text="Agora precisamos de alguns dados, ok?"
+        android:text="Vamos alterar os dados da carteirinha?"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/LlayoutNOME"
+        app:layout_constraintBottom_toTopOf="@+id/LlayoutNOMEedit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/LlayoutNOME"
+        android:id="@+id/LlayoutNOMEedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="3dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="3dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulinho">
+        app:layout_constraintTop_toBottomOf="@+id/titulinhoedit">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,7 +47,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoNome"
+                android:id="@+id/campoNomeedit"
                 android:layout_width="196dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -71,7 +68,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoCID"
+                android:id="@+id/campoCIDedit"
                 android:layout_width="197dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -87,7 +84,7 @@
     <!-- Segunda linha-->
 
     <LinearLayout
-        android:id="@+id/LlayoutFATORRH"
+        android:id="@+id/LlayoutFATORRHedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -97,7 +94,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LlayoutNOME">
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutNOMEedit">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -106,7 +103,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoTipoSanguineo"
+                android:id="@+id/campoTipoSanguineoedit"
                 android:layout_width="196dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -129,7 +126,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoNacionalidade"
+                android:id="@+id/campoNacionalidadeedit"
                 android:layout_width="197dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -143,7 +140,7 @@
     <!-- Terceira Linha -->
 
     <LinearLayout
-        android:id="@+id/LlayoutTERCEIRA"
+        android:id="@+id/LlayoutTERCEIRAedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
@@ -152,7 +149,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LlayoutFATORRH">
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutFATORRHedit">
 
         <!-- CPF -->
 
@@ -162,7 +159,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoCPF"
+                android:id="@+id/campoCPFedit"
                 android:layout_width="196dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -184,7 +181,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/campoRG"
+                android:id="@+id/campoRGedit"
                 android:layout_width="197dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -200,7 +197,7 @@
 
 
     <LinearLayout
-        android:id="@+id/LlayoutQUARTO"
+        android:id="@+id/LlayoutQUARTOedit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -210,7 +207,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/LlayoutTERCEIRA">
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutTERCEIRAedit">
 
 
         <!-- CONTATO -->
@@ -223,7 +220,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
-                android:id="@+id/campoContato"
+                android:id="@+id/campoContatoedit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -240,15 +237,17 @@
     <!-- LINHA DO BOTÃO -->
 
     <Button
-        android:id="@+id/btnCadastrarInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="CADASTRAR"
+        android:id="@+id/btnAlterarInfo"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#42B4E9"
+        android:text="Alterar os dados"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LlayoutQUARTO" />
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutQUARTOedit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

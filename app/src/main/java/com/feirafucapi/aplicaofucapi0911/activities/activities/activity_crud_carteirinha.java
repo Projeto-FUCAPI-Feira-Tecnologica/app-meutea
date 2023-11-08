@@ -56,7 +56,10 @@ public class activity_crud_carteirinha extends AppCompatActivity {
                 intent.putExtra("contato", contato);
                 intent.putExtra("nacionalidade", nacionalidade);
 
+                Toast.makeText(activity_crud_carteirinha.this, "Cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
 

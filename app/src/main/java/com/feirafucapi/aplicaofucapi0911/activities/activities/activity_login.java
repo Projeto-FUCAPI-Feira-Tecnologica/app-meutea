@@ -17,11 +17,9 @@ import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelperUserCadastro;
 
 public class activity_login extends AppCompatActivity {
 
-    private TextView textCadastre;
     private EditText campoemail;
     private EditText camposenha;
-    private Button buttonContinuar;
-    private Cursor nomecadastrado;
+    private Button buttonContinuar, buttonCadastrar;
     private ImageButton buttonVoltar;
     private DBHelperUserCadastro dbHelperUserCadastro;
 
@@ -32,10 +30,19 @@ public class activity_login extends AppCompatActivity {
 
         campoemail = findViewById(R.id.editEmail);
         camposenha = findViewById(R.id.editSenha);
-        textCadastre = findViewById(R.id.txtVCadastrar);
+        buttonCadastrar = findViewById(R.id.btnCadastrar);
         buttonContinuar = findViewById(R.id.btnContinuar);
         buttonVoltar = findViewById(R.id.btnVoltar);
         dbHelperUserCadastro = new DBHelperUserCadastro(this);
+
+        buttonCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_cadastrar.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         buttonContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +56,9 @@ public class activity_login extends AppCompatActivity {
                         Toast.makeText(activity_login.this, "Logado com SUCESSO!", Toast.LENGTH_SHORT).show();
                         /*nomecadastrado = dbHelper.pegarNome(campoemail.getText().toString(), camposenha.getText().toString());
                         intent.putExtra("NAME", nomecadastrado.toString());*/
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(activity_login.this, "Falha no Login", Toast.LENGTH_LONG).show();
                     }
@@ -57,17 +66,15 @@ public class activity_login extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void cadastrar(View view){
-        textCadastre.setOnClickListener(new View.OnClickListener() {
+        buttonVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_cadastrar.class);
+                Intent intent = new Intent(getApplicationContext(), activity_bemvindo1.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
+
     }
-
-
 }

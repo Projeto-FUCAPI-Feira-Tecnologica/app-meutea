@@ -50,6 +50,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/carteirinha_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,13 +67,13 @@
                 android:id="@+id/ivFotoCarteirinha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_fucapi_foreground"/>
+                android:src="@mipmap/ic_fucapi_foreground" />
 
             <TextView
                 android:id="@+id/tvNome"
                 android:layout_width="241dp"
                 android:layout_height="match_parent"
-                android:gravity="start"
+                android:gravity="start|center_vertical"
                 android:text="Seu Nome"
                 android:textSize="22sp" />
 
@@ -148,7 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:gravity="center_horizontal"
                 android:text="TIPO SANGUÍNEO" />
@@ -209,9 +210,9 @@
 
             <TextView
                 android:id="@+id/tvContato"
-                android:layout_width="80dp"
+                android:layout_width="90dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="6dp"
                 android:background="@drawable/corner_carteirinha_label"
                 android:gravity="center" />
@@ -229,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="15dp"
                 android:text="NACIONALIDADE" />
 
@@ -237,7 +238,7 @@
                 android:id="@+id/tvNacionalidade"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/corner_carteirinha_label"
                 android:gravity="center" />
@@ -258,6 +259,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/add_rotina_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditCarteirinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="14dp"
+        android:clickable="true"
+        app:backgroundTint="@color/ic_carteirinha_digital_background"
+        app:layout_constraintBottom_toTopOf="@id/fabAddCarteirinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_edit_24"
         tools:ignore="SpeakableTextPresentCheck" />
 
 

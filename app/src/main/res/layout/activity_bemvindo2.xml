@@ -5,71 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activities.activities.activity_bemvindo1">
+    tools:context=".activities.activities.activity_bemvindo2">
 
-
-    <TextView
-        android:id="@+id/textViewBemvindo1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:gravity="center"
-        android:text="Bem-vindo ao MeuTEA"
-        android:textAlignment="center"
-        android:textSize="45sp"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="-30dp"
+        android:src="@mipmap/ic_meutea_24_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_background_meutea_foreground" />
-
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
-        android:fontFamily="@font/delius"
-        android:text="App de comunicação alternativa para crianças e adolescentes com autismo e transmitirem seus desejos, emoções e necessidades."
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Divirta-se enquanto aprende a se comunicar através de imagens e exercícios sociais.
+ \n\nJunte-se a nós para crescer e aprender!"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#C4000000"
         android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="500dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="-60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBemvindo1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@mipmap/ic_imagetea_foreground" />
+
 
     <Button
-        android:id="@+id/btnPular"
+        android:id="@+id/btnVoltarB1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#009CE5"
-        android:text="Pular"
+        android:text="Voltar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/buttonProx1"
+        android:id="@+id/buttonProx2"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -81,4 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_back_foreground"
         tools:ignore="SpeakableTextPresentCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

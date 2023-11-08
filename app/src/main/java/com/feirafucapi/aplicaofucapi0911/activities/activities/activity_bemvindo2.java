@@ -10,23 +10,23 @@ import android.widget.ImageButton;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 
-public class activity_bemvindo1 extends AppCompatActivity {
+public class activity_bemvindo2 extends AppCompatActivity {
 
-    private Button btnPular;
+    private Button btnVoltar;
     private ImageButton btnProx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bemvindo1);
+        setContentView(R.layout.activity_bemvindo2);
 
-        btnPular = findViewById(R.id.btnPular);
-        btnProx = findViewById(R.id.buttonProx1);
+        btnVoltar = findViewById(R.id.btnVoltarB1);
+        btnProx = findViewById(R.id.buttonProx2);
 
-        btnPular.setOnClickListener(new View.OnClickListener() {
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_login.class);
+                Intent intent = new Intent(getApplicationContext(), activity_bemvindo1.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -35,7 +35,7 @@ public class activity_bemvindo1 extends AppCompatActivity {
         btnProx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_bemvindo2.class);
+                Intent intent = new Intent(getApplicationContext(), activity_login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
