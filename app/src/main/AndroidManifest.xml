@@ -14,6 +14,9 @@
         android:theme="@style/Theme.AplicaçãoFUCAPI0911"
         tools:targetApi="31">
         <activity
+            android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_tarde"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.activity_edit_carteirinha"
             android:exported="false" />
         <activity
@@ -32,7 +35,7 @@
             android:name=".activities.activities.activity_crud_carteirinha"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.rotina.activity_segundafeira_rotina"
+            android:name=".activities.activities.rotina.segundafeira.activity_segundafeira_rotina_manha"
             android:exported="false" />
         <activity
             android:name=".activities.activities.rotina.activity_crudrotina"
@@ -41,7 +44,7 @@
             android:name=".activities.activities.rotina.addrotina"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.rotina.activity_tercafeira_rotina"
+            android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha"
             android:exported="false" />
         <activity
             android:name=".activities.activities.rotina.activity_rotina"
@@ -57,7 +60,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.activities.activity_login"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

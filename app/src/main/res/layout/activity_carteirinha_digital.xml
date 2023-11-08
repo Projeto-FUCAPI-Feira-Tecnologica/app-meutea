@@ -75,6 +75,7 @@
                 android:layout_height="match_parent"
                 android:gravity="start|center_vertical"
                 android:text="Seu Nome"
+                android:hint="Seu Nome Aqui"
                 android:textSize="22sp" />
 
         </LinearLayout>

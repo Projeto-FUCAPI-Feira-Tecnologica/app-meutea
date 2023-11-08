@@ -8,7 +8,7 @@
     tools:context=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha">
 
     <ImageButton
-        android:id="@+id/ibVoltarSR"
+        android:id="@+id/ibVoltarTR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -19,32 +19,40 @@
         app:srcCompat="@drawable/ic_back_foreground"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/textViewManhaS"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonManha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/transparent"
         android:text="MANHÃ"
-        android:textSize="30sp"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:icon="@mipmap/ic_manhasol_foreground"
+        app:iconGravity="end"
+        app:iconPadding="8dp"
+        app:iconSize="90dp"
+        app:iconTint="#ffd359"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewRotinaS"
+        android:id="@+id/recyclerViewRotinaTM"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewManhaS" />
+        app:layout_constraintTop_toBottomOf="@+id/materialButtonManha" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonAddS"
+        android:id="@+id/floatingActionButtonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -52,7 +60,20 @@
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/add_rotina_24"
+        app:srcCompat="@drawable/ic_edit_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTardeTerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#E18340"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrow_down_48"
         tools:ignore="SpeakableTextPresentCheck" />
 
 

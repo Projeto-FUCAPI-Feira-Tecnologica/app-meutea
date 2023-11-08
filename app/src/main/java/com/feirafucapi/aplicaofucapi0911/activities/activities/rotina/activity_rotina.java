@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.activities.activity_menu_principal;
+import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.segundafeira.activity_segundafeira_rotina_manha;
+import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha;
 
 public class activity_rotina extends AppCompatActivity {
 
@@ -35,7 +37,7 @@ public class activity_rotina extends AppCompatActivity {
         btnSegunda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +45,7 @@ public class activity_rotina extends AppCompatActivity {
         btnTerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina.class);
+                Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_manha.class);
                 startActivity(intent);
             }
         });

@@ -66,33 +66,37 @@ public class activity_carteirinha_digital extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+            fabEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String nome = txtNome.getText().toString();
+                    String cid = txtCID.getText().toString();
+                    String rg = txtRG.getText().toString();
+                    String tipo = txtTipo.getText().toString();
+                    String cpf = txtCPF.getText().toString();
+                    String contato = txtContato.getText().toString();
+                    String nacionalidade = txtNacionalidade.getText().toString();
 
-        fabEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String nome = txtNome.getText().toString();
-                String cid = txtCID.getText().toString();
-                String rg = txtRG.getText().toString();
-                String tipo = txtTipo.getText().toString();
-                String cpf = txtCPF.getText().toString();
-                String contato = txtContato.getText().toString();
-                String nacionalidade = txtNacionalidade.getText().toString();
+                    Intent intent = new Intent(getApplicationContext(), activity_edit_carteirinha.class);
 
-                Intent intent = new Intent(getApplicationContext(), activity_edit_carteirinha.class);
+                    intent.putExtra("nome", nome);
+                    intent.putExtra("cid", cid);
+                    intent.putExtra("rg", rg);
+                    intent.putExtra("tipo", tipo);
+                    intent.putExtra("cpf", cpf);
+                    intent.putExtra("contato", contato);
+                    intent.putExtra("nacionalidade", nacionalidade);
 
-                intent.putExtra("nome", nome);
-                intent.putExtra("cid", cid);
-                intent.putExtra("rg", rg);
-                intent.putExtra("tipo", tipo);
-                intent.putExtra("cpf", cpf);
-                intent.putExtra("contato", contato);
-                intent.putExtra("nacionalidade", nacionalidade);
+                    if (nome.equals("") || cid.equals("") | rg.equals("") || tipo.equals("") || cpf.equals("") || contato.equals("") || nacionalidade.equals("")) {
+                        Toast.makeText(getApplicationContext(), "Preencha as informações para poder editar!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(activity_carteirinha_digital.this, "Faça suas alterações!", Toast.LENGTH_SHORT).show();
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
+                }
+            });
 
-                Toast.makeText(activity_carteirinha_digital.this, "Faça suas alterações!", Toast.LENGTH_SHORT).show();
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-        });
 
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +107,7 @@ public class activity_carteirinha_digital extends AppCompatActivity {
         });
 
     }
+
 
     @Override
     protected void onResume() {
