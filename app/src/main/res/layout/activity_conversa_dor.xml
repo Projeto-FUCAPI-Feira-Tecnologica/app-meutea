@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.activities.conversa.activity_conversa_emocoes"
+    tools:context=".activities.activities.conversa.activity_conversa_dor"
     android:background="@drawable/background_conversa">
 
     <LinearLayout
@@ -12,31 +12,31 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/btnVoltarConversa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_foreground"
-            android:background="@drawable/roundcorner"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"/>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Emoções"
-            android:layout_marginLeft="20dp"
-            android:gravity="start|center_horizontal"
-            android:layout_marginTop="28dp"
-            android:textSize="32sp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:textColor="#000000" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnVoltarConversa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_foreground"
+                android:background="@drawable/roundcorner"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dor"
+                android:layout_marginLeft="20dp"
+                android:gravity="start|center_horizontal"
+                android:layout_marginTop="28dp"
+                android:textSize="32sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#000000" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                 android:rowCount="5">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewFeliz"
+                    android:id="@+id/cardViewDorCabeca"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="0"
@@ -61,9 +61,9 @@
                     android:layout_column="0"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
+                    android:backgroundTint="#D0DCF3"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="16dp"
-                    android:backgroundTint="#D0DCF3"
                     app:cardElevation="8dp">
 
                     <LinearLayout
@@ -76,7 +76,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FELIZ"
+                            android:text="CABEÇA"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textSize="36sp"
@@ -85,7 +85,7 @@
                         <ImageView
                             android:layout_width="250dp"
                             android:layout_height="160dp"
-                            android:src="@mipmap/ic_conversa_feliz_foreground"/>
+                            android:src="@drawable/dorcabeca"/>
 
 
                     </LinearLayout>
@@ -94,7 +94,7 @@
                 <!-- Emoções -->
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewDormir"
+                    android:id="@+id/cardViewDorGarganta"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="1"
@@ -103,8 +103,8 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#D0DCF3"
                     app:cardCornerRadius="16dp"
+                    android:backgroundTint="#D0DCF3"
                     app:cardElevation="8dp">
 
                     <LinearLayout
@@ -117,7 +117,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="DORMIR"
+                            android:text="GARGANTA"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textSize="36sp"
@@ -126,7 +126,7 @@
                         <ImageView
                             android:layout_width="250dp"
                             android:layout_height="160dp"
-                            android:src="@mipmap/ic_conversa_dormir_foreground" />
+                            android:src="@drawable/dorgarganta" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -134,16 +134,16 @@
                 <!-- Necessidades -->
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewBarulho"
+                    android:id="@+id/cardViewDorBarriga"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="3"
                     android:layout_rowWeight="1"
                     android:layout_column="0"
+                    android:backgroundTint="#D0DCF3"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#D0DCF3"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp">
 
@@ -157,7 +157,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BARULHO"
+                            android:text="BARRIGA"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textSize="36sp"
@@ -166,7 +166,7 @@
                         <ImageView
                             android:layout_width="250dp"
                             android:layout_height="160dp"
-                            android:src="@mipmap/ic_conversa_barulho_foreground" />
+                            android:src="@drawable/dorbarriga" />
 
 
 
@@ -174,7 +174,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewTeAmo"
+                    android:id="@+id/cardViewDorPerna"
                     android:layout_width="wrap_content"
                     android:layout_height="250dp"
                     android:layout_row="4"
@@ -182,9 +182,9 @@
                     android:layout_column="0"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
-                    android:backgroundTint="#D0DCF3"
                     android:layout_margin="8dp"
                     app:cardCornerRadius="16dp"
+                    android:backgroundTint="#D0DCF3"
                     app:cardElevation="8dp">
 
                     <LinearLayout
@@ -197,7 +197,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TE AMO"
+                            android:text="PERNA"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textSize="36sp"
@@ -206,7 +206,7 @@
                         <ImageView
                             android:layout_width="250dp"
                             android:layout_height="160dp"
-                            android:src="@mipmap/ic_conversa_teamo_foreground" />
+                            android:src="@drawable/dorperna" />
 
 
 

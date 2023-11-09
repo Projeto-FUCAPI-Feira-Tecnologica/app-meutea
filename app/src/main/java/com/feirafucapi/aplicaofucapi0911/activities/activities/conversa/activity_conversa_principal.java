@@ -15,7 +15,7 @@ import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.tercafeira
 public class activity_conversa_principal extends AppCompatActivity {
 
     private ImageButton btnVoltar;
-    private CardView cardViewEmocoes, cardViewEmCasa, cardViewNecessidade, cardViewComidas;
+    private CardView cardViewEmocoes, cardViewEmCasa, cardViewNecessidade, cardViewComidas, cardViewDor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class activity_conversa_principal extends AppCompatActivity {
         cardViewEmCasa = findViewById(R.id.cardViewEmCasa);
         cardViewNecessidade = findViewById(R.id.cardViewNecessidades);
         cardViewComidas = findViewById(R.id.cardViewComidas);
+        cardViewDor = findViewById(R.id.cardViewDor);
 
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,14 @@ public class activity_conversa_principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_conversa_emocoes.class);;
+                startActivity(intent);
+            }
+        });
+
+        cardViewDor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_conversa_dor.class);;
                 startActivity(intent);
             }
         });

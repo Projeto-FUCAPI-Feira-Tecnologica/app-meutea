@@ -3,6 +3,7 @@ package com.feirafucapi.aplicaofucapi0911.activities.activities.principal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class activity_login extends AppCompatActivity {
     private Button buttonContinuar, buttonCadastrar;
     private ImageButton buttonVoltar;
     private DBHelperUserCadastro dbHelperUserCadastro;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class activity_login extends AppCompatActivity {
                 } else {
                     if (logadoID) {
                         Intent intent = new Intent(getApplicationContext(), activity_menu_principal.class);
-                        Toast.makeText(activity_login.this, "Logado com SUCESSO!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity_login.this, "Logado com SUCESSO! ", Toast.LENGTH_SHORT).show();
                         /*nomecadastrado = dbHelper.pegarNome(campoemail.getText().toString(), camposenha.getText().toString());
                         intent.putExtra("NAME", nomecadastrado.toString());*/
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);

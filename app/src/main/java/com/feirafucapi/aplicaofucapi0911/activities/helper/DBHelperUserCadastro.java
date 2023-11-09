@@ -59,10 +59,9 @@ public class DBHelperUserCadastro extends SQLiteOpenHelper {
     }
 
     public Cursor pegarNome(String useremail, String usersenha){
-        SQLiteDatabase meuDB = this.getWritableDatabase();
-        Cursor cursor = meuDB.rawQuery("SELECT nome FROM Usuario WHERE email = ? and senha = ?", new String[]{useremail, usersenha});
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT nome FROM Usuario WHERE email = ? and senha = ?", new String[]{useremail, usersenha});
         return cursor;
     }
-
 
 }
