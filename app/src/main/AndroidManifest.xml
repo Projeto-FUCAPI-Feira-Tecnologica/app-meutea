@@ -14,16 +14,58 @@
         android:theme="@style/Theme.AplicaçãoFUCAPI0911"
         tools:targetApi="31">
         <activity
-            android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_tarde"
+            android:name=".activities.activities.conversa.activity_conversa_comidas"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_edit_carteirinha"
+            android:name=".activities.activities.conversa.activity_conversa_necessidade"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_bemvindo2"
+            android:name=".activities.activities.conversa.activity_conversa_emcasa"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_bemvindo1"
+            android:name=".activities.activities.conversa.activity_conversa_emocoes"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.conversa.activity_conversa_principal"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sextafeira.activity_sextafeira_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sextafeira.activity_sextafeira_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sextafeira.activity_sextafeira_rotina_manha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quintafeira.activity_quintafeira_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quintafeira.activity_quintafeira_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quintafeira.activity_quintafeira_rotina_manha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.activity_quintafeira_rotina_manha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quartafeira.activity_quartafeira_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quartafeira.activity_quartafeira_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.quartafeira.activity_quartafeira_rotina_manha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.carteirinha.activity_edit_carteirinha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.principal.activity_bemvindo2"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.principal.activity_bemvindo1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,34 +74,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.activities.activity_crud_carteirinha"
+            android:name=".activities.activities.carteirinha.activity_crud_carteirinha"
             android:exported="false" />
         <activity
             android:name=".activities.activities.rotina.segundafeira.activity_segundafeira_rotina_manha"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.rotina.activity_crudrotina"
+            android:name=".activities.activities.rotina.segundafeira.activity_segundafeira_rotina_tarde"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.rotina.addrotina"
+            android:name=".activities.activities.rotina.segundafeira.activity_segundafeira_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.activity_crudrotina"
             android:exported="false" />
         <activity
             android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha"
             android:exported="false" />
         <activity
+            android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.tercafeira.activity_tercafeira_rotina_noite"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.rotina.activity_rotina"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_carteirinha_digital"
+            android:name=".activities.activities.carteirinha.activity_carteirinha_digital"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_menu_principal"
+            android:name=".activities.activities.principal.activity_menu_principal"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_cadastrar"
+            android:name=".activities.activities.principal.activity_cadastrar"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.activity_login"
+            android:name=".activities.activities.principal.activity_login"
             android:exported="true" />
     </application>
 

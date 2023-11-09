@@ -5,12 +5,17 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.feirafucapi.aplicaofucapi0911.R;
+import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
 import com.feirafucapi.aplicaofucapi0911.activities.adapter.AdaptadorRotina;
 import com.feirafucapi.aplicaofucapi0911.activities.model.Rotina;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -18,9 +23,10 @@ import java.util.List;
 
 public class activity_tercafeira_rotina_noite extends AppCompatActivity {
 
-    private FloatingActionButton fabToTarde;
+    private MaterialButton mbToTarde;
     private RecyclerView recyclerViewTN;
     private List<Rotina> listaRotinasTN = new ArrayList<>();
+    private ImageButton btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,8 @@ public class activity_tercafeira_rotina_noite extends AppCompatActivity {
         setContentView(R.layout.activity_tercafeira_rotina_noite);
 
         recyclerViewTN = findViewById(R.id.recyclerViewRotinaTN);
+        mbToTarde = findViewById(R.id.materialButtonNtoTarde);
+        btnVoltar = findViewById(R.id.ibVoltarTR);
 
         AdaptadorRotina adaptador = new AdaptadorRotina(listaRotinasTN);
 
@@ -37,6 +45,27 @@ public class activity_tercafeira_rotina_noite extends AppCompatActivity {
         recyclerViewTN.setHasFixedSize(true);
         recyclerViewTN.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recyclerViewTN.setAdapter(adaptador);
+
+        mbToTarde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_tarde.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom);
+                finish();
+            }
+        });
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override

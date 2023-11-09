@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activities.activities.activity_cadastrar">
+    tools:context=".activities.activities.principal.activity_cadastrar">
 
     <ImageButton
         android:id="@+id/imgBtnCad"

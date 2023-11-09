@@ -51,17 +51,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialButtonTarde" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtoManhaTerca"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonTtoManhaTerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#9DD2C9"
-        android:clickable="true"
+        android:text="MANHÃ"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:icon="@drawable/arrow_up"
+        app:iconGravity="start"
+        app:iconPadding="8dp"
+        app:iconSize="30dp"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/arrow_up"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonTtoNoiteTerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2B278C"
+        android:text="NOITE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:icon="@drawable/arrow_down_48"
+        app:iconGravity="end"
+        app:iconPadding="8dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

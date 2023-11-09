@@ -8,21 +8,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.feirafucapi.aplicaofucapi0911.R;
+import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
 import com.feirafucapi.aplicaofucapi0911.activities.adapter.AdaptadorRotina;
 import com.feirafucapi.aplicaofucapi0911.activities.model.Rotina;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class activity_tercafeira_rotina_tarde extends AppCompatActivity {
 
-    private FloatingActionButton fabToManha;
+    private MaterialButton mbToManha, mbToNoite;
     private RecyclerView recyclerViewTT;
     private List<Rotina> listaRotinasTT = new ArrayList<>();
+    private ImageButton btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +44,39 @@ public class activity_tercafeira_rotina_tarde extends AppCompatActivity {
         recyclerViewTT.setAdapter(adaptador);
 
 
-        fabToManha = findViewById(R.id.fabtoManhaTerca);
+        mbToManha = findViewById(R.id.materialButtonTtoManhaTerca);
+        mbToNoite = findViewById(R.id.materialButtonTtoNoiteTerca);
+        btnVoltar = findViewById(R.id.ibVoltarTR);
 
-        fabToManha.setOnClickListener(new View.OnClickListener() {
+        mbToManha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_manha.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom);
+                finish();
+            }
+        });
 
+        mbToNoite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_noite.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                finish();
+            }
+        });
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
 

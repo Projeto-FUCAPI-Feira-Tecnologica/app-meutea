@@ -16,6 +16,7 @@ import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_c
 import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
 import com.feirafucapi.aplicaofucapi0911.activities.adapter.AdaptadorRotina;
 import com.feirafucapi.aplicaofucapi0911.activities.model.Rotina;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -26,7 +27,8 @@ public class activity_tercafeira_rotina_manha extends AppCompatActivity {
     private RecyclerView recyclerViewTM;
     private List<Rotina> listaRotinasTM = new ArrayList<>();
     private ImageButton btnVoltar;
-    private FloatingActionButton fabEditarAdicionar, fabTardeRotina;
+    private FloatingActionButton fabEditarAdicionar;
+    private MaterialButton mbtoTarde;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,8 @@ public class activity_tercafeira_rotina_manha extends AppCompatActivity {
 
         recyclerViewTM = findViewById(R.id.recyclerViewRotinaTM);
         btnVoltar = findViewById(R.id.ibVoltarTR);
-        fabEditarAdicionar = findViewById(R.id.floatingActionButtonAdd);
-        fabTardeRotina = findViewById(R.id.fabTardeTerca);
+        fabEditarAdicionar = findViewById(R.id.floatingActionButtonEditTerca);
+        mbtoTarde = findViewById(R.id.materialButtonMtoTardeTerca);
 
 
         AdaptadorRotina adaptador = new AdaptadorRotina(listaRotinasTM);
@@ -52,7 +54,9 @@ public class activity_tercafeira_rotina_manha extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_rotina.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -67,12 +71,14 @@ public class activity_tercafeira_rotina_manha extends AppCompatActivity {
             }
         });
 
-        fabTardeRotina.setOnClickListener(new View.OnClickListener() {
+        mbtoTarde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_tarde.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                finish();
             }
         });
 

@@ -24,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:text="MANHÃ"
@@ -52,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/materialButtonManha" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonAdd"
+        android:id="@+id/floatingActionButtonEditTerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -63,18 +62,23 @@
         app:srcCompat="@drawable/ic_edit_24"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabTardeTerca"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonMtoTardeTerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#E18340"
-        android:clickable="true"
+        android:text="TARDE"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:icon="@drawable/arrow_down_48"
+        app:iconGravity="end"
+        app:iconPadding="8dp"
+        app:iconSize="50dp"
+        app:iconTint="#ffd359"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/arrow_down_48"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
