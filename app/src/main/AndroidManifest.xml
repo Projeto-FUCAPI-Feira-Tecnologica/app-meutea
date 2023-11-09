@@ -14,6 +14,27 @@
         android:theme="@style/Theme.AplicaçãoFUCAPI0911"
         tools:targetApi="31">
         <activity
+            android:name=".activities.activities.principal.activity_qrcode_feira"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.domingo.activity_domingo_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.domingo.activity_domingo_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.domingo.activity_domingo_rotina_manha"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sabado.activity_sabado_rotina_noite"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sabado.activity_sabado_rotina_tarde"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.rotina.sabado.activity_sabado_rotina_manha"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.conversa.activity_conversa_dor"
             android:exported="false" />
         <activity

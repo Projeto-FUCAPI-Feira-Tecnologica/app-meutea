@@ -92,4 +92,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialButtonConversa" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0D7AFF"
+        android:text="QRCODE da Feira"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:icon="@drawable/baseline_qr_code_scanner_24"
+        app:iconGravity="end"
+        app:iconPadding="8dp"
+        app:iconSize="50dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

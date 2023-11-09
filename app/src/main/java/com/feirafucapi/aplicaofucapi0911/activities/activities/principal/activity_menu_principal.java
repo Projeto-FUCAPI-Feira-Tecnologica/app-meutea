@@ -17,7 +17,7 @@ import com.feirafucapi.aplicaofucapi0911.activities.helper.DBHelperUserCadastro;
 
 public class activity_menu_principal extends AppCompatActivity {
 
-    private Button botaoRotina, botaoCarteirinha, botaoConversa;
+    private Button botaoRotina, botaoCarteirinha, botaoConversa, botaoQRcode;
     private DBHelperUserCadastro dbHelperUserCadastro;
     private Cursor nome;
     private TextView bemvindo;
@@ -30,6 +30,7 @@ public class activity_menu_principal extends AppCompatActivity {
         botaoRotina = findViewById(R.id.materialButtonRotina);
         botaoCarteirinha = findViewById(R.id.materialButtonCarteirinha);
         botaoConversa = findViewById(R.id.materialButtonConversa);
+        botaoQRcode = findViewById(R.id.materialButtonQRCode);
         bemvindo = findViewById(R.id.textViewBemVindo);
 
         dbHelperUserCadastro = new DBHelperUserCadastro(this);
@@ -61,6 +62,16 @@ public class activity_menu_principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_conversa_principal.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        botaoQRcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_qrcode_feira.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
