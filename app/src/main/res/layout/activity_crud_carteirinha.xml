@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".activities.activities.carteirinha.activity_crud_carteirinha">
+
+
+    <TextView
+        android:id="@+id/titulinho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:text="Agora precisamos de alguns dados, ok?"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/LlayoutNOME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LlayoutNOME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulinho">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoNome"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="Nome"
+                android:inputType="text|textCapCharacters"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CIDZERA -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoCID"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="CID"
+                android:inputType="text|textCapCharacters"
+                android:maxLength="7"
+                android:textColorHint="#000000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Segunda linha-->
+
+    <LinearLayout
+        android:id="@+id/LlayoutFATORRH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutNOME">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoTipoSanguineo"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="Tipo Sanguíneo"
+                android:inputType="text|textCapCharacters"
+                android:maxLength="3"
+                android:textColorHint="#000000" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- CIDZERA -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoNacionalidade"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Nacionalidade"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Terceira Linha -->
+
+    <LinearLayout
+        android:id="@+id/LlayoutTERCEIRA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutFATORRH">
+
+        <!-- CPF -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoCPF"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="CPF (somente números)"
+                android:maxLength="11"
+                android:inputType="text" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- RG -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoRG"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="RG (somente números)"
+                android:maxLength="8"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Quarta Linha -->
+
+
+    <LinearLayout
+        android:id="@+id/LlayoutQUARTO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutTERCEIRA">
+
+
+        <!-- CONTATO -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/campoContato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="Contato de Emergência"
+                android:maxLength="11"
+                android:inputType="phone|number"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- LINHA DO BOTÃO -->
+
+    <Button
+        android:id="@+id/btnCadastrarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CADASTRAR"
+        android:backgroundTint="#42B4E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LlayoutQUARTO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/stroke_quadrado_rotina" android:width="2dp"/>
+            <solid android:color="@color/background_quadrado_rotina"/>
+        </shape>
+    </item>
+
+</selector>

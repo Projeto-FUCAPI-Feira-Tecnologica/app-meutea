@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.activities.conversa.activity_conversa_principal"
+    android:background="@drawable/background_conversa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <ImageButton
+                android:id="@+id/btnVoltarConversa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_foreground"
+                android:background="@drawable/roundcorner"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"/>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Comunicação"
+                android:layout_marginTop="28dp"
+                android:textSize="32sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#000000"
+                android:layout_marginLeft="40dp"/>
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/diadia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dia a Dia"
+                android:textSize="32sp"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"/>
+            
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/diadia"
+                android:rowCount="10"
+                android:columnCount="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEmCasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="fill"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_emcasa_carteirinha_foreground"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Em casa"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textAlignment="center"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+                <!-- Emoções -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEmocoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="#6394F0"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_emocoes_carteirinha_foreground"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emoções"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+                <!-- Necessidades -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewNecessidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="fill"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="#847DB0"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_banheiro_foreground"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Necessidades"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/conversaRotinas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rotinas"
+                android:textSize="32sp"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/conversaRotinas"
+                android:rowCount="10"
+                android:columnCount="2">
+
+                <!-- Emoções -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewDor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="fill"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#7FA99F"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_dordecabeca_foreground"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dor"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewComidas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#EBD0B1"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_comidas_foreground"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Comidas"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+
+        </RelativeLayout>
+
+        </LinearLayout>
+    
+
+</ScrollView>

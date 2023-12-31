@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".activity_cadastrar">
+    tools:context=".activities.activities.principal.activity_cadastrar">
 
     <ImageButton
         android:id="@+id/imgBtnCad"
@@ -57,45 +57,25 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutCad"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="230dp"
+        android:layout_width="316dp"
+        android:layout_height="189dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCad">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/outline_person_24"
-                android:ellipsize="none
-"
-                android:gravity="center"
-                android:hint="Nome" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/email_24"
+                android:drawableStart="@drawable/outline_person_24"
                 android:gravity="center"
-                android:hint="Email"
-
-
+                android:imeOptions="actionNext"
+                android:hint="Nome"
                 android:inputType="text|textEmailAddress"
                 android:textColor="#000000" />
 
@@ -104,30 +84,48 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/lock_24"
-                    android:ellipsize="none"
+                    android:drawableStart="@drawable/email_24"
                     android:gravity="center"
-                    android:hint="Senha" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:imeOptions="actionNext"
+                    android:hint="Email"
+                    android:inputType="text|textEmailAddress"
+                    android:textColor="#000000" />
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/lock_24"
+                        android:ellipsize="none"
+                        android:gravity="center"
+                        android:hint="Senha"
+                        android:inputType="text|textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
+
     <Button
-        android:id="@+id/btnContinuar"
+        android:id="@+id/btnCadastrar"
         android:layout_width="200dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#42B4E9"
         android:elevation="5dp"
         android:stateListAnimator="@null"
         android:text="CADASTRAR"
         android:textSize="20sp"
-
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCad" />
 

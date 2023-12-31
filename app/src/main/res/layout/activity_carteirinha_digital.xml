@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <ImageButton
+        android:id="@+id/btnVoltarCarteirinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundcorner"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_foreground"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/imgBtnCarteirinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundcorner"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_foreground"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter"
+        android:text="Frente"
+        android:textColor="#191818"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/carteirinha_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2">
+
+        <LinearLayout
+            android:id="@+id/linearlayoutfoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivFotoCarteirinha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fucapi_foreground" />
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="241dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text="Seu Nome"
+                android:hint="Seu Nome Aqui"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <!-- CID -->
+
+        <LinearLayout
+            android:id="@+id/linearlayoutcid"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayoutfoto"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="15dp"
+                android:text="CID" />
+
+            <TextView
+                android:id="@+id/tvCID"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- RG -->
+
+        <LinearLayout
+            android:id="@+id/linearlayoutrg"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayoutfoto"
+            android:layout_toRightOf="@id/linearlayoutcid"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:text="RG" />
+
+            <TextView
+                android:id="@+id/tvRG"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Tipo Sanguíneo -->
+
+        <LinearLayout
+            android:id="@+id/linearlayouttipagem"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayoutfoto"
+            android:layout_toRightOf="@id/linearlayoutrg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="TIPO SANGUÍNEO" />
+
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Tipo Sanguíneo -->
+
+        <LinearLayout
+            android:id="@+id/linearlayoutcpf"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayoutcid"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="15dp"
+                android:text="CPF" />
+
+            <TextView
+                android:id="@+id/tvCPF"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutcontato"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayoutrg"
+            android:layout_toRightOf="@id/linearlayoutcpf"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="CONTATO DE EMERGÊNCIA"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvContato"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutnacionalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/linearlayouttipagem"
+            android:layout_toRightOf="@id/linearlayoutcontato"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:text="NACIONALIDADE" />
+
+            <TextView
+                android:id="@+id/tvNacionalidade"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/corner_carteirinha_label"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddCarteirinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:backgroundTint="@color/ic_carteirinha_digital_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add_rotina_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditCarteirinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="14dp"
+        android:clickable="true"
+        app:backgroundTint="@color/ic_carteirinha_digital_background"
+        app:layout_constraintBottom_toTopOf="@id/fabAddCarteirinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_edit_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
