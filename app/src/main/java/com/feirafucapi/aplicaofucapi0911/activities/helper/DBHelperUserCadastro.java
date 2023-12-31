@@ -24,14 +24,11 @@ public class DBHelperUserCadastro extends SQLiteOpenHelper {
         db.execSQL(createTableSQL);
     }
 
-    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Se você precisar atualizar o esquema do banco de dados, adicione a lógica aqui
         db.execSQL("drop table if exists Usuario");
-        // Por exemplo, você pode executar instruções SQL para fazer alterações na estrutura da tabela
     }
 
-    public boolean inserirDados(String nome, String email, String senha) {
+    public boolean inserirDados(String nome, String email, String senha) { // Função para adicionar ao banco de dados dados inseridos no cadastrar
         SQLiteDatabase meuDB = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("nome", nome);
@@ -43,7 +40,7 @@ public class DBHelperUserCadastro extends SQLiteOpenHelper {
         else return true;
     }
 
-    public boolean checarNome(String userName) {
+    public boolean checarNome(String userName) { // Verificar se já nao tem um nome cadastrado no banco de dados ao cadastrar um novo
         SQLiteDatabase meuDB = this.getReadableDatabase();
         Cursor cursor = meuDB.rawQuery("SELECT * FROM Usuario WHERE nome = ?", new String[]{userName});
         return cursor.getCount() > 0;
@@ -56,12 +53,6 @@ public class DBHelperUserCadastro extends SQLiteOpenHelper {
             return true;
         else return false;
 
-    }
-
-    public Cursor pegarNome(String useremail, String usersenha){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT nome FROM Usuario WHERE email = ? and senha = ?", new String[]{useremail, usersenha});
-        return cursor;
     }
 
 }

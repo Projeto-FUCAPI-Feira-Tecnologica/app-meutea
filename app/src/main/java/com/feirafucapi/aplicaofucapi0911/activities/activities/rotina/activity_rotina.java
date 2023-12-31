@@ -10,13 +10,7 @@ import android.widget.ImageButton;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.activities.principal.activity_menu_principal;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.domingo.activity_domingo_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.quartafeira.activity_quartafeira_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.quintafeira.activity_quintafeira_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.sabado.activity_sabado_rotina_manha;
 import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.segundafeira.activity_segundafeira_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.sextafeira.activity_sextafeira_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha;
 
 public class activity_rotina extends AppCompatActivity {
 
@@ -59,7 +53,7 @@ public class activity_rotina extends AppCompatActivity {
         btnTerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_tercafeira_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -69,7 +63,7 @@ public class activity_rotina extends AppCompatActivity {
         btnQuarta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_quartafeira_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -79,7 +73,7 @@ public class activity_rotina extends AppCompatActivity {
         btnQuinta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_quintafeira_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -89,7 +83,7 @@ public class activity_rotina extends AppCompatActivity {
         btnSexta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_sextafeira_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -99,7 +93,7 @@ public class activity_rotina extends AppCompatActivity {
         btnSabado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_sabado_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -109,7 +103,7 @@ public class activity_rotina extends AppCompatActivity {
         btnDomingo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), activity_domingo_rotina_manha.class);
+                Intent intent = new Intent(getApplicationContext(), activity_segundafeira_rotina_manha.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

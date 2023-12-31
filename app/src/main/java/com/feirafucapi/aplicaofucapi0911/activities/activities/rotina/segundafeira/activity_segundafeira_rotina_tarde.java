@@ -13,8 +13,6 @@ import android.widget.LinearLayout;
 
 import com.feirafucapi.aplicaofucapi0911.R;
 import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.activity_rotina;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.tercafeira.activity_tercafeira_rotina_manha;
-import com.feirafucapi.aplicaofucapi0911.activities.activities.rotina.tercafeira.activity_tercafeira_rotina_noite;
 import com.feirafucapi.aplicaofucapi0911.activities.adapter.AdaptadorRotina;
 import com.feirafucapi.aplicaofucapi0911.activities.model.Rotina;
 import com.google.android.material.button.MaterialButton;
